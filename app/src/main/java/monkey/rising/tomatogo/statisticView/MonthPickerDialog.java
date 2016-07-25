@@ -28,6 +28,6 @@ public class MonthPickerDialog extends DatePickerDialog {
     @Override
     public void onDateChanged(DatePicker view, int year, int month, int day) {
         super.onDateChanged(view, year, month, day);
-        this.setTitle(year + "年" + (month + 1) + "月");
+        this.setTitle(year + "年heiheihei" + (month + 1) + "月");
     }
 }
