@@ -19,7 +19,7 @@ public class MonthPickerDialog extends DatePickerDialog {
         super(context.getContext(), callBack, year, monthOfYear, dayOfMonth);
         this.setTitle(year + "年" + (monthOfYear + 1) + "月");
 
-        int testFlag;
+        int anothertest;
 
         DatePicker datePicker = getDatePicker();
         try {
