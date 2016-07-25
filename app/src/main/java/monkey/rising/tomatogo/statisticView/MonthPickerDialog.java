@@ -19,10 +19,21 @@ public class MonthPickerDialog extends DatePickerDialog {
         super(context.getContext(), callBack, year, monthOfYear, dayOfMonth);
         this.setTitle(year + "年" + (monthOfYear + 1) + "月");
 
-        int testFlag;
-        int test;
+        int testFlag = 0;
 
 
+        DatePicker datePicker = getDatePicker();
+        try {
+            Field daySpinner =datePicker.getClass().getDeclaredField("mDaySpinner");
+            daySpinner.setAccessible(true);
+            ((View)daySpinner.get(datePicker)).setVisibility(View.GONE);
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
