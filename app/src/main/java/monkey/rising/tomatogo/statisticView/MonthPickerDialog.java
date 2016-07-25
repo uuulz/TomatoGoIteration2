@@ -23,18 +23,6 @@ public class MonthPickerDialog extends DatePickerDialog {
         int test;
 
 
-        DatePicker datePicker = getDatePicker();
-        try {
-            Field daySpinner =datePicker.getClass().getDeclaredField("mDaySpinner");
-            daySpinner.setAccessible(true);
-            ((View)daySpinner.get(datePicker)).setVisibility(View.GONE);
-        } catch (NoSuchFieldException e) {
-            e.printStackTrace();
-        } catch (IllegalArgumentException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        }
     }
 
     @Override
